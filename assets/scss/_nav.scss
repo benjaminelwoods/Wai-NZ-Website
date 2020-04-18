@@ -1,0 +1,97 @@
+@import 'hamburger';
+
+.navbar{
+    box-sizing: border-box;
+    padding: 15px 0;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navLogo {
+    width: 200px;
+    padding-left: 40px;
+}
+
+.navList {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background: $primaryColour;
+    padding: 100px 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.listItem {
+    padding: 20px;
+    font-family: $primaryFont;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+
+.dropLogo {
+    max-width: 200px;
+    position: relative;
+    top: -23vh;
+    left: -25%;
+}
+
+@media screen and (min-width: $lWidth) {
+
+    .navLogo {
+        min-width: 250px;
+    }
+
+    .navIcon {
+        display: none;
+    }
+
+    .dropLogo {
+        display: none;
+    }
+
+    .listItem {
+        padding: 25px 15px;
+        font-size: 22px;
+    }
+
+    .navList {
+        display: block !important;
+        background: transparent;
+        padding: 0;
+        height: auto;
+
+        a {
+            display: inline-block;
+        }
+
+        .center {
+            @include fullCenterRight;
+        }
+
+        .cover {
+            height: auto;
+            width: auto;
+        }
+    }
+
+}

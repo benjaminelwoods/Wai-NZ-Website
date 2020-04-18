@@ -1,0 +1,95 @@
+@import 'mixins';
+@import 'grid';
+@import 'variables';
+@import 'nav';
+@import 'reset';
+
+@import 'home';
+
+//
+
+::-moz-selection { background: $primaryColour; color: white; }
+::selection { background: $primaryColour; color: white; }
+
+a {
+    &:focus {
+        outline: 0;
+    }
+}
+
+//
+
+.alignLeft {
+    @include fullCenterLeft;
+}
+
+.alignRight {
+    @include fullCenterRight;
+}
+
+@media screen and (min-width: $mWidth) {
+
+    .mAlignLeft {
+        @include fullCenterLeft;
+    }
+
+    .mAlignRight {
+        @include fullCenterRight;
+    }
+
+}
+
+//
+
+.cover {
+    width: 100%;
+    height: 100%;
+}
+
+.center {
+    @include fullCenter;
+}
+
+.primaryColour {
+    color: $primaryColour;
+}
+
+.heading {
+    font-family: $primaryFont;
+}
+
+.headingMaori {
+    font-weight: 800;
+    font-size: 20px;
+    color: $darkColour;
+}
+
+.headingPrimary {
+    font-weight: 500;
+    font-size: 60px;
+    color: $primaryColour;
+}
+
+.subHeading {
+    font-family: "Georgia", serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.5;
+    color: $secondaryColour;
+}
+
+.button {
+    font-family: $primaryFont;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: $defaultTiming;
+    padding: 12px 25px;
+    border-radius: 3px;
+}
+
+.btnPrimary {
+    border: 1px solid $primaryColour;
+    background: $primaryColour;
+    color: white;
+}

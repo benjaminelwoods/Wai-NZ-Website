@@ -1,0 +1,44 @@
+$columns: 12;
+$columnWidth: 100% / $columns;
+$mWidth: 600px;
+$lWidth: 1200px;
+
+@mixin column {
+    float: left;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    @include clear;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 15%;
+}
+
+@for $i from 1 through $columns {
+    .col#{$i}{
+        width: $columnWidth * $i;
+        @include column;
+    }
+}
+
+@media screen and (min-width: $mWidth){
+    @for $i from 1 through $columns {
+        .colM#{$i}{
+            width: $columnWidth * $i;
+            // @include column;
+        }
+    }
+}
+
+@media screen and (min-width: $lWidth){
+    @for $i from 1 through $columns {
+        .colL#{$i}{
+            width: $columnWidth * $i;
+            // @include column;
+        }
+    }
+}
