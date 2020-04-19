@@ -54,28 +54,54 @@ a {
     color: $primaryColour;
 }
 
+.secondaryColour {
+    color: $secondaryColour;
+}
+
+.white {
+    color: white;
+}
+
+.darkColour {
+    color: $darkColour;
+}
+
+.highlight {
+    color: $highlightColour;
+}
+
 .heading {
     font-family: $primaryFont;
 }
 
 .headingMaori {
-    font-weight: 800;
-    font-size: 20px;
-    color: $darkColour;
+    font-family: $secondaryFont;
+    font-size: 30px;
+    text-decoration: underline;
+    text-decoration-color: $highlightColour;
+}
+
+.headingMain {
+    font-weight: 500;
+    font-size: 80px;
 }
 
 .headingPrimary {
     font-weight: 500;
     font-size: 60px;
-    color: $primaryColour;
 }
 
 .subHeading {
-    font-family: "Georgia", serif;
+    font-family: $secondaryFont;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 44px;
     line-height: 1.5;
-    color: $secondaryColour;
+}
+
+.paragraph {
+    font-family: $secondaryFont;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .button {
@@ -85,11 +111,60 @@ a {
     font-weight: 600;
     transition: $defaultTiming;
     padding: 12px 25px;
-    border-radius: 3px;
+
+    &:hover {
+        transition: $defaultTiming;
+    }
 }
 
 .btnPrimary {
-    border: 1px solid $primaryColour;
-    background: $primaryColour;
+    border: 1px solid $darkColour;
+    background: $darkColour;
     color: white;
+    box-shadow: 0 0 0 rgba(256,256,256,1);
+
+    &:hover {
+        box-shadow: 10px 10px 0 rgba(256,256,256,1);
+    }
+}
+
+.marginVert20 {
+    margin: 20px 0;
+}
+
+.paddingHor10 {
+    padding: 0 10%;
+}
+
+.sectionMargin {
+    margin: 10% 0;
+}
+
+.imgFront {
+    position: absolute;
+    overflow: hidden;
+    background-image: url('../images/imgTest.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 30em;
+    max-height: 35em;
+    width: 20em;
+}
+
+.relative{
+    position: relative;
+}
+
+.imgBehind {
+    position: relative;
+    z-index: -1;
+    top: -5em;
+    right: -5em;
+    overflow: hidden;
+    background: lightblue;
+    background-size: cover;
+    background-position: center;
+    min-height: 30em;
+    max-height: 35em;
+    width: 20em;
 }

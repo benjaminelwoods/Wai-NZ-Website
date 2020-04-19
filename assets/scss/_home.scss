@@ -1,7 +1,9 @@
 .homeSplashBanner {
     width: 100%;
-    height: 100vh;
-    background: lightblue;
+    height: 80vh;
+    background:url('../images/home-banner-old.jpg');
+    background-position: bottom;
+    background-size: cover;
 }
 
 .splashContentContainer {

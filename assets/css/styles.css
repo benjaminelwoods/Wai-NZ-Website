@@ -368,7 +368,7 @@
 
 /* line 20, ../scss/_nav.scss */
 .navLogo {
-  width: 200px;
+  max-width: 200px;
   padding-left: 40px;
 }
 
@@ -382,7 +382,7 @@
   width: 100%;
   height: 100vh;
   text-align: center;
-  background: #EA474B;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 100px 30px;
 }
 
@@ -394,14 +394,13 @@ a {
 /* line 42, ../scss/_nav.scss */
 .listItem {
   padding: 20px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "ABeeZee", sans-serif;
   font-size: 30px;
-  text-transform: uppercase;
   text-decoration: none;
   color: white;
 }
 
-/* line 51, ../scss/_nav.scss */
+/* line 50, ../scss/_nav.scss */
 .dropLogo {
   max-width: 200px;
   position: relative;
@@ -410,39 +409,39 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-  /* line 60, ../scss/_nav.scss */
+  /* line 59, ../scss/_nav.scss */
   .navLogo {
     min-width: 250px;
   }
 
-  /* line 64, ../scss/_nav.scss */
+  /* line 63, ../scss/_nav.scss */
   .navIcon {
     display: none;
   }
 
-  /* line 68, ../scss/_nav.scss */
+  /* line 67, ../scss/_nav.scss */
   .dropLogo {
     display: none;
   }
 
-  /* line 72, ../scss/_nav.scss */
+  /* line 71, ../scss/_nav.scss */
   .listItem {
     padding: 25px 15px;
     font-size: 22px;
   }
 
-  /* line 77, ../scss/_nav.scss */
+  /* line 76, ../scss/_nav.scss */
   .navList {
     display: block !important;
     background: transparent;
     padding: 0;
     height: auto;
   }
-  /* line 83, ../scss/_nav.scss */
+  /* line 82, ../scss/_nav.scss */
   .navList a {
     display: inline-block;
   }
-  /* line 87, ../scss/_nav.scss */
+  /* line 86, ../scss/_nav.scss */
   .navList .center {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -454,7 +453,7 @@ a {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  /* line 91, ../scss/_nav.scss */
+  /* line 90, ../scss/_nav.scss */
   .navList .cover {
     height: auto;
     width: auto;
@@ -872,11 +871,13 @@ textarea {
 /* line 1, ../scss/_home.scss */
 .homeSplashBanner {
   width: 100%;
-  height: 100vh;
-  background: lightblue;
+  height: 80vh;
+  background: url("../images/home-banner-old.jpg");
+  background-position: bottom;
+  background-size: cover;
 }
 
-/* line 7, ../scss/_home.scss */
+/* line 9, ../scss/_home.scss */
 .splashContentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -891,17 +892,17 @@ textarea {
 
 /* line 11, ../scss/styles.scss */
 ::-moz-selection {
-  background: #EA474B;
+  background: #2F99CC;
   color: white;
 }
 
 /* line 12, ../scss/styles.scss */
 ::-moz-selection {
-  background: #EA474B;
+  background: #2F99CC;
   color: white;
 }
 ::selection {
-  background: #EA474B;
+  background: #2F99CC;
   color: white;
 }
 
@@ -984,38 +985,71 @@ a:focus {
 
 /* line 53, ../scss/styles.scss */
 .primaryColour {
-  color: #EA474B;
+  color: #2F99CC;
 }
 
 /* line 57, ../scss/styles.scss */
+.secondaryColour {
+  color: #1D6080;
+}
+
+/* line 61, ../scss/styles.scss */
+.white {
+  color: white;
+}
+
+/* line 65, ../scss/styles.scss */
+.darkColour {
+  color: #383838;
+}
+
+/* line 69, ../scss/styles.scss */
+.highlight {
+  color: yellow;
+}
+
+/* line 73, ../scss/styles.scss */
 .heading {
   font-family: "Montserrat", sans-serif;
 }
 
-/* line 61, ../scss/styles.scss */
+/* line 77, ../scss/styles.scss */
 .headingMaori {
-  font-weight: 800;
-  font-size: 20px;
-  color: #424242;
+  font-family: "ABeeZee", sans-serif;
+  font-size: 30px;
+  text-decoration: underline;
+  -webkit-text-decoration-color: yellow;
+          text-decoration-color: yellow;
 }
 
-/* line 67, ../scss/styles.scss */
+/* line 84, ../scss/styles.scss */
+.headingMain {
+  font-weight: 500;
+  font-size: 80px;
+}
+
+/* line 89, ../scss/styles.scss */
 .headingPrimary {
   font-weight: 500;
   font-size: 60px;
-  color: #EA474B;
 }
 
-/* line 73, ../scss/styles.scss */
+/* line 94, ../scss/styles.scss */
 .subHeading {
-  font-family: "Georgia", serif;
+  font-family: "ABeeZee", sans-serif;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 44px;
   line-height: 1.5;
-  color: green;
 }
 
-/* line 81, ../scss/styles.scss */
+/* line 101, ../scss/styles.scss */
+.paragraph {
+  font-family: "ABeeZee", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* line 107, ../scss/styles.scss */
 .button {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
@@ -1024,14 +1058,72 @@ a:focus {
   -webkit-transition: 0.35s;
   transition: 0.35s;
   padding: 12px 25px;
-  border-radius: 3px;
+}
+/* line 115, ../scss/styles.scss */
+.button:hover {
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
 }
 
-/* line 91, ../scss/styles.scss */
+/* line 120, ../scss/styles.scss */
 .btnPrimary {
-  border: 1px solid #EA474B;
-  background: #EA474B;
+  border: 1px solid #383838;
+  background: #383838;
   color: white;
+  -webkit-box-shadow: 0 0 0 white;
+          box-shadow: 0 0 0 white;
+}
+/* line 126, ../scss/styles.scss */
+.btnPrimary:hover {
+  -webkit-box-shadow: 10px 10px 0 white;
+          box-shadow: 10px 10px 0 white;
+}
+
+/* line 131, ../scss/styles.scss */
+.marginVert20 {
+  margin: 20px 0;
+}
+
+/* line 135, ../scss/styles.scss */
+.paddingHor10 {
+  padding: 0 10%;
+}
+
+/* line 139, ../scss/styles.scss */
+.sectionMargin {
+  margin: 10% 0;
+}
+
+/* line 143, ../scss/styles.scss */
+.imgFront {
+  position: absolute;
+  overflow: hidden;
+  background-image: url("../images/imgTest.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 30em;
+  max-height: 35em;
+  width: 20em;
+}
+
+/* line 154, ../scss/styles.scss */
+.relative {
+  position: relative;
+}
+
+/* line 158, ../scss/styles.scss */
+.imgBehind {
+  position: relative;
+  z-index: -1;
+  top: -5em;
+  right: -5em;
+  overflow: hidden;
+  background: lightblue;
+  background-size: cover;
+  background-position: center;
+  min-height: 30em;
+  max-height: 35em;
+  width: 20em;
 }
 
 /*# sourceMappingURL=styles.css.map */
