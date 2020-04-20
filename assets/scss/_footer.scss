@@ -1,0 +1,29 @@
+.quickLink {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.1;
+    transition: $defaultTiming;
+
+}
+
+.quickLinkContainer {
+    transition: $defaultTiming;
+
+    & li {
+        transition: $defaultTiming;
+    }
+
+    &:hover > li {
+        opacity: 0.5;
+        transition: $defaultTiming;
+
+        &:hover {
+            opacity: 1;
+            transition: $defaultTiming;
+        }
+    }
+}
+
+.footerLogo {
+    max-width: 400px;
+}

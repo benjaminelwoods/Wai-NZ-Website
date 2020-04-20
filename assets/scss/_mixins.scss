@@ -16,14 +16,14 @@
 
 @mixin fullCenterLeft {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 @mixin fullCenterRight {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 

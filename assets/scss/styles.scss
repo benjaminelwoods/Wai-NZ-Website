@@ -1,8 +1,10 @@
 @import 'mixins';
 @import 'grid';
 @import 'variables';
-@import 'nav';
 @import 'reset';
+
+@import 'nav';
+@import 'footer';
 
 @import 'home';
 
@@ -27,6 +29,10 @@ a {
     @include fullCenterRight;
 }
 
+.textAlignRight {
+    text-align: right;
+}
+
 @media screen and (min-width: $mWidth) {
 
     .mAlignLeft {
@@ -46,9 +52,27 @@ a {
     height: 100%;
 }
 
+
+// Flexbox
+
+.flex {
+    display: flex;
+}
+
 .center {
     @include fullCenter;
 }
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+}
+
+
+// Colours
 
 .primaryColour {
     color: $primaryColour;
@@ -70,6 +94,17 @@ a {
     color: $highlightColour;
 }
 
+.backPrimary {
+    background-color: $primaryColour;
+}
+
+.backDark {
+    background-color: $darkColour;
+}
+
+
+// Text
+
 .heading {
     font-family: $primaryFont;
 }
@@ -77,13 +112,12 @@ a {
 .headingMaori {
     font-family: $secondaryFont;
     font-size: 30px;
-    text-decoration: underline;
-    text-decoration-color: $highlightColour;
 }
 
 .headingMain {
     font-weight: 500;
-    font-size: 80px;
+    font-size: 70px;
+    line-height: 1.5;
 }
 
 .headingPrimary {
@@ -94,7 +128,7 @@ a {
 .subHeading {
     font-family: $secondaryFont;
     font-weight: 400;
-    font-size: 44px;
+    font-size: 34px;
     line-height: 1.5;
 }
 
@@ -103,6 +137,8 @@ a {
     font-size: 18px;
     line-height: 1.5;
 }
+
+// Buttons
 
 .button {
     font-family: $primaryFont;
@@ -128,6 +164,9 @@ a {
     }
 }
 
+
+// Spacing
+
 .marginVert20 {
     margin: 20px 0;
 }
@@ -136,35 +175,62 @@ a {
     padding: 0 10%;
 }
 
+.paddingHor15 {
+    padding: 0 15%;
+}
+
+.paddingVert2 {
+    padding: 2.5% 0;
+}
+
+.paddingR5 {
+    padding-right: 5%;
+}
+
+.paddingL5 {
+    padding-left: 5%;
+}
+
 .sectionMargin {
     margin: 10% 0;
 }
 
-.imgFront {
-    position: absolute;
-    overflow: hidden;
-    background-image: url('../images/imgTest.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 30em;
-    max-height: 35em;
-    width: 20em;
+.paddingX15Y2 {
+    padding: 2% 15%;
 }
 
-.relative{
-    position: relative;
+.maxWidth35 {
+    max-width: 35%;
 }
 
-.imgBehind {
-    position: relative;
-    z-index: -1;
-    top: -5em;
-    right: -5em;
-    overflow: hidden;
-    background: lightblue;
-    background-size: cover;
-    background-position: center;
-    min-height: 30em;
-    max-height: 35em;
-    width: 20em;
+.map {
+    width: 500px;
+    height: 500px;
+}
+
+.img {
+    max-width: 400px;
+}
+
+.shadowRight {
+    box-shadow: 75px -75px 0 rgba(35,98,136,1);
+}
+
+.shadowLeft {
+    box-shadow: -75px -75px 0 rgba(35,98,136,1);
+}
+
+.input {
+    border: 0;
+    background: white;
+    color: $darkColour;
+    padding: 15px 20px;
+    margin: 5px 0;
+    width: 100%;
+    transition: $defaultTiming;
+
+    &:focus {
+        width: 110%;
+        transition: $defaultTiming;
+    }
 }
